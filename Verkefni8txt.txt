@@ -1,0 +1,55 @@
+Verkefni 8 - (7%)
+1.	Hver er munurinn á for, forEach, for-in og for-of lykkjum?
+Munurinn er sá að for lúppar áfram þangað til að gefið gildi verður false, á meðan forEach og for-In fara í gegnum skilgreint variable af öllum töldum properties af objecti.
+For of hins vegar skilar bara svokölluðum „iterable objects“ sem væri þá t.d. nákvæmt innihald tölufylkis. Var fylki = [1, 2, 3] for of myndi skila hér 1,2,3 en ekki 0, 1, 2
+
+
+2.	Gerðu eitthvað nytsamlegt með eftirfarandi kóðabút: var divs = document.getElementsByTagName('div');
+ for (var i = 0, div; div = divs[i]; i++) { /* Process div in some way */ }
+
+3.	 Hvað er template literals? Komdu með kóðasýnidæmi ásamt skýringum
+Template literals eru strengja literals sem bjóða upp á að nota svokölluð embedded expressions. Þau leyfa manni að nota fleiri en eina línu og nota expressions á strengina.
+
+Dæmi; 
+Console.log('texta lína 1 blablabla \n' + 'textalína 2. ');
+Output:
+„textalína 1 blablabla
+Textalína 2“;
+
+4.	Prófaðu að nota Map object
+var map = new map();
+var string = ‚a string‘;
+
+map.set(string, „hallo heimur“);
+
+map.get(string);
+
+5.	 Hvað er Class í JavaScript og hvernig tengist það prototype?
+Class í Javascript er góð leið til þess að gera kóða einfaldari og læsilegri, og er í raun bara viðbót við fyrirliggjandi prototype-erfðir. Hann bætir ekki við nýju erfða módeli í Javascript.
+
+6.	Hvað er Closures, hvernig sérðu fyrir þér gagnsemi þess? Komdu með kóðasýnidæmi ásamt skýringum
+Closures er orð yfir þegar notast er við svo kallað lexical scoping í function umhverfi. Hægt er að búa til fall sem skilar undirliggjandi falli, og undirliggjandi fallið hefur aðgang að variables sem væru t.d. skilgreind í parent fallinu. Praktísk notkun á þessu er yfirleitt í front end á vefum, þar sem t.d. eitthver event trigger framkvæmir aðeins virkni af einu falli.
+
+Dæmi;
+Function samlagning(x) {
+	Return function(y)
+		Return x+y;
+};
+}
+Var samlagning3 = samlagning(3);
+Var samlagning5 = samlagning(5);
+
+Console.log(samlagning3(2)); // 3+2 = 5
+Console.log(samlagning5(3)); // 5+3 = 8
+
+7.	Hvað er Arguments object? Hvenær getur verið nytsamlegt að nota hann? Komdu með kóðasýnidæmi með notkun ásamt skýringum
+Arguments object er líkt og array object, en er samt ekki array. Hann hefur ekki sömu properties og Array fyrir utan .length. En hægt er að convertera argument object yfir í array. Hann er local variable sem er í boði innan allra functions nema arrow functions.
+Nytsamleg leið;
+Var blab = function(one) {
+	Arguments.
+
+8.	Linkur virkar ekki.
+
+9.	 Hvað er promise og tilhvers er það notað?
+
+Promise gerir manni kleift að nota handlera þannig þeir skili að endanum success gildi eða failure ástæðu. Promise er með þrjár stöður; pending: hvorki búinn að uppfylla skilyrði né hafna. Fulfilled: Allt gekk eftir óskum. Rejected: Mistókst
